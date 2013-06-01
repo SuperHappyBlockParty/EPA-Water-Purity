@@ -5,6 +5,16 @@
     <title>(U) Maps test for EPA thingy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style type="text/css">
+      /* Bootstrap Css Map Fix*/
+      #mapcanvas img { 
+        max-width: none;
+        }
+        /* Bootstrap Css Map Fix*/
+        #mapcanvas label { 
+          width: auto; display:inline; 
+          } 
+    </style>
   </head>
   <body>
     <script src="http://code.jquery.com/jquery.js"></script>
@@ -23,9 +33,9 @@
               var self = this;
               self.getCurrentPosition(function(position, status) {
                 if ( status === 'OK' ) {
-                  var clientPosition = 
+                  var clientPosition =
                     new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-                    self.addMarker({'position': clientPosition});
+                    self.addMarker({'position': clientPosition, 'bounds': false});
                     self.get('map').panTo(clientPosition);
                 }});
             }
