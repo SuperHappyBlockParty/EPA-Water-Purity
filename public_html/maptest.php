@@ -28,6 +28,7 @@
         $('#mapcanvas').gmap(
           {'center': '33.5,-82',
            'zoom':   12,
+           'scaleControl': true,
            'callback': function() {
               // Attempt to use viewer's current position.
               var self = this;
