@@ -9,6 +9,11 @@ header.jumbotron{
 	margin: 0 0 2%;
 	padding: 2.5% 0;
 }
+header.jumbotron .logo img{
+	display: block;
+	margin: 0 auto;
+	max-width: 50%;
+}
 
 #searchBar{
 	background: #e6e6e6;
