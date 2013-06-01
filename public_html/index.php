@@ -4,7 +4,8 @@
 	$epa = new Epa();
 	
 	if (strlen($_REQUEST['zip']) > 4) {
-		$result_data = $epa->get_by_zip($_REQUEST['zip']);	
+		$zip_code_req = (int) trim($_REQUEST['zip']);
+		$result_data = $epa->get_by_zip($zip_code_req);
 	}
 ?>		
 		<div class="container" id="searchBar">
@@ -26,8 +27,9 @@
 			<div class="row">
 				<div class="span12">
 					<?php
-					if (strlen($_REQUEST['zip']) > 4) {
+					if (strlen($zip_code_req) > 4) {
 						if (is_array($result_data) && count($result_data) > 0) {
+							echo '<h1>' . $zip_code_req . "</h1>\n";
 							echo '<table class="table table-striped">';
 							echo "<tr>\n";
 							echo '<th>Facility Name</th>';
