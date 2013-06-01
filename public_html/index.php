@@ -28,14 +28,13 @@
 					<?php
 					if (strlen($_REQUEST['zip']) > 4) {
 						if (is_array($result_data) && count($result_data) > 0) {
-							echo '<table class="table table-striped">\n';
+							echo '<table class="table table-striped">';
 							echo "<tr>\n";
 							echo '<th>Facility Name</th>';
 							echo '<th>County Served</th>';
 							echo '<th>Contaminant</th>';
 							echo '<th>Health Effects</th>';
 							echo '<th>Sources</th>';
-							echo '<th>Name</th>';
 							echo "</tr>\n";
 							foreach ($result_data as $k => $v) {
 								//print_r($v); // Uncomment to display all data
