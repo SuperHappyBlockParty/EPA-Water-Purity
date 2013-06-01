@@ -17,8 +17,8 @@ APIs and Datasets
 
 Working Information
 -------------------
-1. Folder: /var/www/vhosts/dev.superhappyaugusta.com/public_html/epa/
-2. Web Address: http://dev.superhappyaugusta.com/epa/
+1. Folder: /var/www/vhosts/epa.superhappyaugusta.com/
+2. Web Address: http://epa.superhappyaugusta.com
 3. Github Project: https://github.com/SuperHappyBlockParty/EPA-Water-Purity
 4. Challenge Hackpad: https://hackforchange.hackpad.com/CHALLENGE-EPA-Safe-Drinking-Water-App-Challenge-bxr7VkLH87p
 
