@@ -6,8 +6,9 @@ require("./class.db.php");
 // EPA interface class by Jeevan
 class Epa {
 
-	public function get_by_zip($zip) {
-		
+	public function get_by_zip($zipcode) {
+
+		$zip = (int) $zipcode;
 		$res = $this->get_cached( $zip );
 		if (is_array($res) && count($res) > 0) {
 			// echo "Got cached data";
