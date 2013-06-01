@@ -112,7 +112,7 @@ function resultsToTable($results) {
 					<h1>Active Public Water Systems in Georgia</h1>
 				
 					<?php
-						$url = 'http://iaspub.epa.gov/enviro/efservice/PWS/CONTACTSTATE/GA/rows/1:10';
+						$url = 'http://iaspub.epa.gov/enviro/efservice/PWS/CONTACTSTATE/GA';
 						// echo 'test';
 						$xmlResults = requestData($url);
 						// echo 'test';
