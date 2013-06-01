@@ -52,7 +52,6 @@ function resultsToTable($results) {
 	<head>
 		<title>EPA Data</title>
 		<meta charset="utf-8">
-		<title>Bootstrap, from Twitter</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="" />
 		<meta name="author" content="" />
@@ -70,34 +69,37 @@ function resultsToTable($results) {
 	<body>
 		
 		<div class="navbar navbar-inverse navbar-fixed-top">
-		  <div class="navbar-inner">
-			<div class="container">
-			  <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			  </button>
-			  <a class="brand" href="#">EPA Water Purity</a>
-			  <div class="nav-collapse collapse">
-				<ul class="nav">
-				  <li class="active"><a href="#">Home</a></li>
-				  <li><a href="#about">About</a></li>
-				</ul>
-			  </div><!--/.nav-collapse -->
+			<div class="navbar-inner">
+				<div class="container">
+					<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					
+					<a class="brand" href="#">EPA Water Purity</a>
+					
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+							<li class="active"><a href="#">Home</a></li>
+							<li><a href="#about">About</a></li>
+						</ul>
+					</div><!--/.nav-collapse -->
+				</div>
 			</div>
-		  </div>
 		</div>
 		
 		
 
 		
-		<div class="container-fluid">
+		<div class="container">
 			
-			<div class="row-fluid">
-				<div class="span4">
-					<h3>Enter your zip code:</h3>
+			<div class="row">
+				<div class="span1">
+					<img src="img/search@2x.png" alt="Search" />
 				</div>
-				<div class="span8">
+				<div class="span11">
+					<h3>Enter your zip code:</h3>
 					<form class="form-search">
 						<input type="text" class="input-large search-query">
 						<button type="submit" class="btn btn-medium"><i class="icon-search"></i> Search</button>
@@ -105,27 +107,35 @@ function resultsToTable($results) {
 				</div>
 			</div>
 			
-			
-			<h1>Active Public Water Systems in Georgia</h1>
-			
-			<?php
-			
-			// set the URL of the data request, and call the functions to consume and display data
-			$url = 'http://iaspub.epa.gov/enviro/efservice/PWS/CONTACTSTATE/GA/rows/1:10';
-			echo 'test';
-			$xmlResults = requestData($url);
-			echo 'test';
-			echo(resultsToTable($xmlResults));
-			
-			?>
+			<div class="row">
+				<div class="span12">
+					<h1>Active Public Water Systems in Georgia</h1>
+				
+					<?php
+						$url = 'http://iaspub.epa.gov/enviro/efservice/PWS/CONTACTSTATE/GA/rows/1:10';
+						// echo 'test';
+						$xmlResults = requestData($url);
+						// echo 'test';
+						echo(resultsToTable($xmlResults));		
+					?>
+				</div>
+			</div>
 		</div>
 		
 		<footer>
-			<img src="img/logo-epa.png" alt="Environmental Protection Agency" />
-			
+			<div class="container">
+				<div class="row">
+					<div class="span4">
+						<img src="img/logo-epa.png" alt="Environmental Protection Agency" />
+					</div>
+					<div class="span8">
+						<p>A project of <a href="http://superhappyaugusta.com">Super Happy Block Party: Greater Augusta</a>
+						as part of the <a href="http://hackforchange.org">National Day of Civic Hacking</a></p>
+					</div>
+			</div>
 		</footer>
 		
-		<script src="js/jquery.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="js/bootstrap-transition.js"></script>
 		<script src="js/bootstrap-alert.js"></script>
 		<script src="js/bootstrap-modal.js"></script>
