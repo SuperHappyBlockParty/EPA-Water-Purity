@@ -7,7 +7,8 @@
 					<img src="img/search@2x.png" alt="Search" />
 				</div>
 				<div class="span11">
-					<h3>Enter your zip code:</h3>
+					<h1>Enter your zip code:</h1>
+					<p>See if water quality issues exist in your area.</p>
 					<form class="form-search" method="post" action="#">
 						<input type="text" class="input-large search-query">
 						<button type="submit" class="btn btn-medium"><i class="icon-search"></i> Search</button>

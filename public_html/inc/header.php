@@ -42,6 +42,6 @@
 		
 		<header class="jumbotron subhead" id="overview">
 			<div class="container">
-				<img src="img/logo-cleanwater.png" alt="Clean Water" />
+				<a href="/" class="logo"><img src="img/logo-cleanwater.png" alt="Clean Water" /></a>
 			</div>
 		</header>
