@@ -18,6 +18,11 @@ class Db {
 		
 		return $this->conn;
 	}
+
+  // Prepare statement
+  public function prepare($stmt) {
+    return $this->conn->prepare($stmt);
+  }
 	
 	// Query db
 	public function query($q) {
@@ -60,6 +65,13 @@ class Db {
 		return $out;
 	
 	}
+
+  // Return all rows - prepared statement
+  public function all_ps($stmt) {
+    $stmt->execute();
+    $result = $stmt->get_result();
+    return $result->fetch_all();
+  }
 	
 	// Number of rows
 	public function rows() {

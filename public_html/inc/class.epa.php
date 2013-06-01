@@ -32,27 +32,36 @@ class Epa {
 	private function parse_csv_to_db($res_api, $zip) {
 
 		global $db;
+    // statements
+    $delete = "DELETE FROM contaminants WHERE geolocation_zip=?";
+    $insert = "INSERT INTO contaminants (`PWSID`, `PWSNAME`, `STATE`, " +
+              "`COUNTYSERVED`, `GEOLOCATION_ZIP`, `VIOID`, `CCODE`, " +
+              "`CNAME`, `SOURCES`, `DEFINITION`, `HEALTH_EFFECTS`, " +
+              "`CTYPE`, `VCODE`, `VNAME`, `VTYPE`, `VIOLMEASURE`, " +
+              "`ENFACTIONTYPE`, `ENFACTIONNAME`, `ENFDATE`, " + 
+              "`COMPPERBEGINDATE`, `COMPPERENDDATE`, `update_time`) " +
+              "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, " +
+              "?, ?, ?, ?, ?, NOW())";
+    $insert_types =
+      "ssssiiisssssissssssss";
 
-		$db->q("DELETE FROM contaminants WHERE GEOLOCATION_ZIP = '" . $zip . "'");
+    $stmt = $db->prepare($delete);
+		$stmt->bind_param("i", $zip);
+    $stmt->execute();
+    $stmt->close();
 		$res_split = explode("\n", $res_api);
 		$out = array();
+
+    // Prepare insert statement only once
+    $stmt = $db->prepare($insert);
 		foreach ($res_split as $k => $v) {
 			// Ignore first line (columns)
 			if ($k == 0) { continue; }
 
-			$res_v = str_getcsv($v);
-
-			$ins = "INSERT INTO contaminants (`PWSID`, `PWSNAME`, `STATE`, `COUNTYSERVED`, `GEOLOCATION_ZIP`, `VIOID`, `CCODE`, `CNAME`, `SOURCES`, `DEFINITION`, `HEALTH_EFFECTS`, `CTYPE`, `VCODE`, `VNAME`, `VTYPE`, `VIOLMEASURE`, `ENFACTIONTYPE`, `ENFACTIONNAME`, `ENFDATE`, `COMPPERBEGINDATE`, `COMPPERENDDATE`, `update_time`) 
-			VALUES (";
-			foreach ($res_v as $kr => $vr) {
-				$ins .= "'" . $db->escape($vr) . "', ";
-			}
-
-			$ins .= " NOW())";
-
-			$db->q($ins);
-
+			$res_v = array_merge(array($insert_types), str_getcsv($v));
+      call_user_func_array($stmt->bind_param, $res_v);
 		}
+    $stmt->close();
 
 		return true;
 
@@ -60,8 +69,13 @@ class Epa {
 
 	private function get_cached($zip) {
 		global $db;
+    $stmt = $db->prepare("SELECT * FROM contaminants WHERE " +
+                        "geolocation_zip = ?");
+    $stmt->bind_param("i", $zip);
+    $result = $db->all_ps($stmt);
+    $stmt->close();
 
-		return $db->all("SELECT * FROM contaminants WHERE GEOLOCATION_ZIP = '" . $zip . "'");
+    return $result;
 	}
 
 	private function get_api_contaminants($zip) {
