@@ -31,4 +31,4 @@ Contact
 Project Team
 ------------
 1. Eric Ryan Harrison <me@ericharrison.info> [@blister](http://twitter.com/blister)
-2. You Go Here!
+2. Jeevan Kumar <sites@sanjeevan.com> [@jeevank](http://twitter.com/jeevank)
