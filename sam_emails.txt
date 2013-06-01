@@ -1,0 +1,38 @@
+I’m hoping to have the data exposed and the issue of unsafe drinking water quality exposed.  If there are local prototype apps/projects that focus on community issues, the safety of the local drinking water might be part of those solutions.
+ 
+Last year, Dr. Oz brought the issue of unsafe drinking water to light with a show titled, “Is Your Water Causing Cancer?”  http://www.doctoroz.com/videos/your-water-causing-cancer-pt-1.  While dramatic, it is true that many Public Water Systems (PWSs) are in violation of EPA regulations for having levels of contaminants that are unsafe for consumption and carry serious health risks, including cancer.  We hope to disseminate the issue further by putting the data in the hands of social coders.
+ 
+Here are some resources:
+ 
+SDWIS Data Model (consists of four tables – we will have two additional views by next week adding contaminant definitions, health effects, and sources of contamination): http://www.epa.gov/enviro/facts/sdwis/model.html
+ 
+The API Syntax and Documentation (API is for Envirofacts database and includes much more than just Drinking Water Data): http://www.epa.gov/enviro/facts/services.html
+ 
+•             API does limit to 5000 rows per request, so large bulk download is not available with one call, but the API outputs to XML, JSON, Excel, and CSV
+•             Table joins, column filtering, and other parameters available in the API syntax
+ 
+Here is our website search for Drinking Water Data (just to give you the same data in report form – provides context, although this website is dated): http://www.epa.gov/enviro/facts/sdwis/search.html
+ 
+ 
+API SAMPLES
+Here are some questions based on the new views we are creating (for test only right now):
+ 
+1)      I would like to know, within my county, what are the different Public Water Systems ( PWS ), the population served by each one, the regulating agency and the contact name and phone number.
+ 
+Rest Web Service URL: http://oasdev.saic.com/enviro2/efservice/MV_PWS_COUNTYSERVED/COUNTYSERVED/FAIRFAX
+ 
+2)      I would like to know, within my county, the violations and enforcement actions for the different PWSs.
+ 
+Rest Web Service URL: http://oasdev.saic.com/enviro2/efservice/MV_PWS_VIOLENFACTION/COUNTYSERVED/MCLEAN
+ 
+3)     Rest call for contaminants definitions, health effects, and sources (will be linked to existing view in next day or two): http://oasdev.saic.com/enviro2/efservice/sdwis_contaminants_definition/excel/
+ 
+4)     Here's another sample of the view we are testing today, that links the health effects data to the violation data: http://oasdev.saic.com/enviro2/efservice/SDW_CONTAM_VIOL/state/=/VA/excel/rows/1:100/
+ 
+ 
+I'm working on an official Guidance document and can include sample API calls using your County.  I'll try and have that by early next week.
+ 
+Thanks,
+ 
+Sam Bronson
+U.S. EPA
