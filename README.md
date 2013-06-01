@@ -14,6 +14,7 @@ APIs and Datasets
 1. http://www.epa.gov/enviro/facts/sdwis/model.html
 2. http://water.epa.gov/drink/contaminants/ **(Contaminants)**
 3. http://www.epa.gov/developer/ef_api.html **(REST API)**
+4. http://iaspub.epa.gov/enviro/efservice/sdwis_cont1/ 
 
 Working Information
 -------------------
@@ -27,3 +28,7 @@ Contact
 1. Augusta POC: Eric Ryan Harrison <me@ericharrison.info>
 2. EPA POC: Sam Bronson <sbrons1@gmail.com> 443-631-0867
 
+Project Team
+------------
+1. Eric Ryan Harrison <me@ericharrison.info> [@blister](http://twitter.com/blister)
+2. You Go Here!
