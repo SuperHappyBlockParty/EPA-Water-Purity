@@ -10,6 +10,11 @@ header.jumbotron{
 	padding: 2.5% 0;
 }
 
+#searchBar{
+	background: #004080;
+	color: #fff;
+}
+
 footer{
 	background: #999;
 	padding: 2.5% 0;
