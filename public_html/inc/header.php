@@ -25,6 +25,7 @@
 	</head>
 
 	<body>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="navbar-inner">

@@ -12,7 +12,6 @@
 			</div>
 		</footer>
 
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script src="js/bootstrap-transition.js"></script>
 		<script src="js/bootstrap-alert.js"></script>
 		<script src="js/bootstrap-modal.js"></script>
