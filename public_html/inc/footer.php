@@ -23,7 +23,6 @@
 						<a href="http://hackforchange.org" target="_blank">
 							<img src="img/logo-hackforchange.png" alt="National Day of Civic Hacking" />
 						</a>
-						<p>Made by <a href="http://superhappyaugusta.com">Super Happy Block Party: Greater Augusta</a></p>
 					</div>
 					
 					<div class="span3">
