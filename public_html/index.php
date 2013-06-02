@@ -14,8 +14,8 @@
 					<img src="img/search@2x.png" alt="Search" />
 				</div>
 				<div class="span11">
-					<h1>See if water quality issues exist in your area.</h1>
-					<p>Enter your zip code. <span class="muted">(Initial results may take a few seconds to load.)</span></p>
+					<h1>See if water quality issues exist in your area</h1>
+					<p>Enter your zip code. <span class="muted">(Initial results may take a few seconds to load)</span></p>
 					<form class="form-search" method="post" action="/">
 						<input type="text" class="input-large search-query" name="zip" value="<?php echo $zip_code_req ?>" />
 						<button type="submit" class="btn btn-medium"><i class="icon-search"></i> Search</button>
