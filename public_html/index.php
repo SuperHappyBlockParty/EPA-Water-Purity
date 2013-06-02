@@ -41,14 +41,17 @@
 							foreach ($result_data as $k => $v) {
 								//print_r($v); // Uncomment to display all data
 								echo "<tr>\n";
-								echo '<td>' . $v['PWSNAME'] . "</td>\n"; // Display a single column
+								echo '<td>' . $v['PWSNAME'] . "</td>\n";
 								echo '<td>' . $v['COUNTYSERVED'] . "</td>\n";
 								echo '<td>' . $v['CNAME'] . "</td>\n";
 								echo '<td>' . $v['HEALTH_EFFECTS'] . "</td>\n";
 								echo '<td>' . $v['SOURCES'] . "</td>\n";
 								echo "</tr>\n";
 								echo "<tr>\n";
-								echo '<td colspan="5">' . $v['DEFINITION'] . "</td>\n";
+								echo '<td>Enf Date: ' . $v['ENFDATE'] . "</td>\n";
+								echo '<td>Enf Name: ' . $v['ENFACTIONNAME'] . "</td>\n";
+								echo '<td>Enf Type: ' . $v['ENFACTIONTYPE'] . "</td>\n";
+								echo '<td colspan="3">' . $v['DEFINITION'] . "</td>\n";
 								echo "</tr>\n";
 							}
 							echo '</table>';
