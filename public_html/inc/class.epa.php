@@ -1,7 +1,7 @@
 <?php
 
 
-require("./class.db.php");
+require("inc/class.db.php");
 
 // EPA interface class by Jeevan
 class Epa {
