@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>EPA Data</title>
+		<title>CleanWater - EPA Water Purity Checker</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="" />
@@ -35,7 +35,7 @@
 						<span class="icon-bar"></span>
 					</button>
 
-					<a class="brand" href="#">EPA Water Purity</a>
+					<a class="brand" href="#">CleanWater &#0151; EPA Water Purity Checker</a>
 
 					<div class="nav-collapse collapse">
 						<ul class="nav">
