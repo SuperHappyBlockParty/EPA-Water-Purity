@@ -35,8 +35,9 @@
           });
       });
     </script>
-    <div class="container">
-      <div id="mapcanvas" style="padding: 1em; width: 100%; height: 40em;" />
+    <div class="container" style="margin-bottom: 1em;">
+      <div id="mapcanvas" style="width: 100%; height: 40em;">
+      </div>
     </div>
 <?php
     include 'inc/footer.php';
