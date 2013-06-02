@@ -15,9 +15,9 @@
 				</div>
 				<div class="span11">
 					<h1>See if water quality issues exist in your area.</h1>
-					<p>Enter your zip code:</p>
+					<p>Enter your zip code. <span class="muted">(Initial results may take a few seconds to load.)</span></p>
 					<form class="form-search" method="post" action="/">
-						<input type="text" class="input-large search-query" name="zip" />
+						<input type="text" class="input-large search-query" name="zip" value="<?php echo $zip_code_req ?>" />
 						<button type="submit" class="btn btn-medium"><i class="icon-search"></i> Search</button>
 					</form>
 				</div>
@@ -29,7 +29,7 @@
 					<?php
 					if (strlen($zip_code_req) > 4) {
 						if (is_array($result_data) && count($result_data) > 0) {
-							echo '<h1>' . $zip_code_req . "</h1>\n";
+							echo '<h1>Requested Zip Code: ' . $zip_code_req . "</h1>\n";
 							echo '<table class="table table-striped">';
 							echo "<tr>\n";
 							echo '<th>Facility Name</th>';
