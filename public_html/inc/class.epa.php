@@ -1,7 +1,7 @@
 <?php
 
 
-require("./class.db.php");
+require("inc/class.db.php");
 
 // EPA interface class by Jeevan
 class Epa {
@@ -23,7 +23,7 @@ class Epa {
 			$res_check = $this->parse_csv_to_db($res_api, $zip);
 
 			if ($res_check == true) {
-				echo "Got result from API to DB";
+				// echo "Got result from API to DB";
 				return $this->get_by_zip($zip);
 			}
 		}
